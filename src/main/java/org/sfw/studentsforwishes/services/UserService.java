@@ -37,7 +37,7 @@ public class UserService {
     public List<User> getUsers() {
         return userRepository.findAll();
     }
-
+    public List<User> getVolunteers() { return userRepository.findByVolunteerTrue(); }
     public Optional<User> getUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
